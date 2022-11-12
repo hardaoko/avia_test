@@ -1,0 +1,39 @@
+.main_container {
+  width: 962px;
+  margin: 0 auto;
+  padding-top: 68px;
+}
+
+.input_wrapper {
+  background: #5C87DB;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 29px 29px ;
+  box-sizing: border-box;
+}
+
+.search_form_container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 86px;
+  padding-right: 29px;
+  border-radius: 0px 0px 15px 15px;;
+  box-shadow: 0px 0px 14px rgba(112, 121, 153, 0.3);
+}
+
+button{
+  background: #5C87DB;
+  border-radius: 10px;
+  padding: 12px 34px;
+  font-size: 14px;
+  color: white;
+  border: 0;
+}
+
+button:disabled {
+  background: grey;
+}
+

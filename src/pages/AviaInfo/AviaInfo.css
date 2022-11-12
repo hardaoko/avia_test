@@ -1,0 +1,149 @@
+.avia_info_container {
+  width: 962px;
+  margin: 0 auto;
+  padding-top: 68px;
+}
+
+.ticket_container {
+  height: 200px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 14px rgba(112, 121, 153, 0.3);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 157px 615px 190px;
+}
+
+.left_side_ticket {
+}
+
+.ticket_return_box {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: fit-content;
+  background: #8ba5d8;
+  display: flex;
+  justify-content: center;
+  padding: 6px 24px;
+  border-radius: 15px 0px;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.left_side_ticket > img {
+  position: relative;
+  height: 39px;
+  width: 39px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 28px;
+}
+
+.left_side_ticket p {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 9px;
+  color: #5c5c5c;
+}
+
+.center_side_ticket {
+  display: flex;
+  flex-direction: column;
+}
+
+.center_up_box {
+  display: grid;
+  grid-template-columns: 95px 310px 100px 110px;
+}
+
+.text_time {
+  font-weight: 700;
+  font-size: 24px;
+  margin: 41px 0px 0px;
+}
+
+.text_city_date {
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 8px;
+  color: #5c5c5c;
+}
+
+.right_side_ticket {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid #dde3ee;
+}
+
+.price_box {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.airport_from {
+  display: inline-block;
+  margin: 32px 0 0 10px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #b7bac1;
+}
+
+.airport_to {
+  position: relative;
+  display: inline-block;
+  margin-left: 242px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #b7bac1;
+}
+
+.way_line {
+  height: 0px;
+  width: 264px;
+  border: 1px solid #b7bac1;
+  margin: 8px auto;
+}
+
+.way_line::after,
+.way_line::before {
+  content: " ";
+  display: block;
+  position: relative;
+  height: 8px;
+  width: 8px;
+  background: #b7bac1;
+  border-radius: 50%;
+}
+
+.way_line::before {
+  top: -4px;
+  left: -4px;
+}
+.way_line::after {
+  top: -12px;
+  left: 100%;
+}
+
+.text_way_time {
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: #b7bac1;
+  margin: 8px 0;
+}
+
+.destination_box {
+  padding-left: 30px;
+}
+
+.luggage_box {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  align-items: flex-end;
+  padding: 0 20px 30% 0;
+}
