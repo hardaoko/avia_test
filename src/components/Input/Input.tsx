@@ -2,6 +2,7 @@ import { FC, useRef } from "react";
 import { IInputProps } from "../../utils/types";
 import DateRangeIcon from "@mui/icons-material/DateRange";
 import "./Input.css";
+import { cities } from "../../utils/constants";
 
 const Input: FC<IInputProps> = ({
   placeholder,
@@ -14,6 +15,13 @@ const Input: FC<IInputProps> = ({
 }) => {
   const color = value === "" ? "#5C5C5C" : "#5C87DB ";
   const inputRef = useRef() as React.MutableRefObject<HTMLInputElement>;
+  let filtered: Array<string> = [];
+
+  if (!icon) {
+    filtered = cities.filter((city) =>
+      city.toUpperCase().includes(value.toUpperCase())
+    );
+  }
 
   const handleClick = () => {
     inputRef.current.focus();
@@ -47,14 +55,18 @@ const Input: FC<IInputProps> = ({
         <div className="text_input" onClick={handleClick}>
           <input
             type="text"
-            id={label}
             onChange={setValue}
             value={value}
             placeholder={placeholder}
             ref={inputRef}
             required={required}
-            pattern="^(?:[А-Яа-я]{2,}(?:(\\.\\s|'s\\s|\\s?-?\\s?|\\s)?(?=[А-Яа-я]+))){1,2}(?:[А-Яа-я]+)?$"
+            list={value}
           />
+          <datalist id={value}>
+            {filtered.map((city, index) => {
+              return <option value={city} key={index} />;
+            })}
+          </datalist>
         </div>
       )}
     </div>
