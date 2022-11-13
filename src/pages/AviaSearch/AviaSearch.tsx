@@ -9,9 +9,9 @@ import { cities } from "../../utils/constants";
 export const AviaSearch = () => {
   const { from, to, departure, arrival } = useMySelector((store) => store);
   const [cityFrom, setCityFrom] = useState(from);
-  const [cityTo, setTo] = useState(to);
-  const [departureDate, setDeparture] = useState(departure);
-  const [arrivalDate, setArrival] = useState(arrival || "");
+  const [cityTo, setCityTo] = useState(to);
+  const [departureDate, setDepartureDate] = useState(departure);
+  const [arrivalDate, setArrivalDate] = useState(arrival || "");
   const [valid, setValid] = useState(true);
   const dispatch = useMyDispatch();
   const navigate = useNavigate();
@@ -43,15 +43,15 @@ export const AviaSearch = () => {
     checkInvalid();
   };
   const changeTo = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setTo(e.target.value);
+    setCityTo(e.target.value);
     checkInvalid();
   };
   const changeDeparture = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setDeparture(e.target.value);
+    setDepartureDate(e.target.value);
     checkInvalid();
   };
   const changeArrival = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setArrival(e.target.value);
+    setArrivalDate(e.target.value);
   };
 
   const checkInvalid = () => {};
@@ -61,7 +61,7 @@ export const AviaSearch = () => {
       <div className="input_wrapper">
         <Input
           label="Откуда"
-          value={from}
+          value={cityFrom}
           setValue={changeFrom}
           placeholder="Город вылета"
           icon={false}
